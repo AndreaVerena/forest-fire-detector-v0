@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <h1>¡Bienvenido@!</h1>
+<h6>Estimado usuario,
+esta aplicación está pensada con la visión de procesar imágenes aéreas 
+capturadas por drones a fin de identificar incendios forestales. 
+De momento nos encontramos en una fase inicial donde la aplicación recibe un directorio que debe
+ser cargado manualmente, se ejecuta un modelo y se entrega como respuesta:</h6>
+<h6>- Fire: si se detecta un incendio en la imagen</h6>
+<h6>- No fire: si no se detecta un incendio</h6>
+
+-->
+
+<div>
+	<div class="center">
+		<div id='div-logo'><img src="{{ url_for('static', filename='l2.png') }}" /></div>
+		<h1>FOREST FIRE DETECTOR</h1><br><br> <br>
+<!--		<h2>Presione el botón para iniciar escaneo</h2><br><br> <br>
+     	<form id="upload-file" method="post" enctype="multipart/form-data">
+        	<label for="imageUpload" class="upload-label">
+            	Iniciar
+        	</label>
+        	<input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    	</form>
+ 	
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div> -->
+        <button type="button" style="background-color:#FAD502; border-color:#837107; color:#837107" class="btn btn-primary btn-lg" id="btn-predict">INICIAR ESCANEO</button>
+
+    	<div class="loader" style="display:none;"></div>
+    </div>
+		
+		
+	<div style="clear: both">
+		<div class="center">
+    		<h3 id="result"></h3><br>
+    		<p id="result2"></p><br>
+    	</div>
+    	
+    	<div class="center" id="div-showImages" ><img src="{{ url_for('static', filename='c.png') }}" /><br></div>
+    	<div class="center" id="div-mapa" ><img src="{{ url_for('static', filename='mapa2.png') }}" /><br></div>
+
+    	<div class="center"><br><button type="button" style="background-color:#fefae0; border-color:#bc6c25; color:#bc6c25" class="btn btn-primary btn-lg" id="btn-back">Volver</button></div>
+		</div>
+
+	</div>
+<!-- 	<hr />-->
+	
+</div>
+
+{% endblock %}
