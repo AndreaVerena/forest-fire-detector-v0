@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!-- <h1>¡Bienvenido@!</h1>
 <h6>Estimado usuario,
 esta aplicación está pensada con la visión de procesar imágenes aéreas 
@@ -13,8 +14,8 @@ ser cargado manualmente, se ejecuta un modelo y se entrega como respuesta:</h6>
 
 <div>
 	<div class="center">
-		<div id='div-logo'><img src="{{ url_for('static', filename='l2.png') }}" /></div>
-		<h1>FOREST FIRE DETECTOR</h1><br><br> <br>
+		<div id='div-logo'><img src="{{ url_for('static', filename='l2.png') }}" style="max-width:100%;height:auto;" /></div>
+		<h1>FOREST FIRE DETECTOR</h1><br>
 <!--		<h2>Presione el botón para iniciar escaneo</h2><br><br> <br>
      	<form id="upload-file" method="post" enctype="multipart/form-data">
         	<label for="imageUpload" class="upload-label">
@@ -41,8 +42,8 @@ ser cargado manualmente, se ejecuta un modelo y se entrega como respuesta:</h6>
     		<p id="result2"></p><br>
     	</div>
     	
-    	<div class="center" id="div-showImages" ><img src="{{ url_for('static', filename='c.png') }}" /><br></div>
-    	<div class="center" id="div-mapa" ><img src="{{ url_for('static', filename='mapa2.png') }}" /><br></div>
+    	<div class="center" id="div-showImages" ><img src="{{ url_for('static', filename='c.png') }}" style="max-width:100%;height:auto;" /><br></div>
+    	<div class="center" id="div-mapa" ><img src="{{ url_for('static', filename='mapa2.png') }}" style="max-width:100%;height:auto;" /><br></div>
 
     	<div class="center"><br><button type="button" style="background-color:#fefae0; border-color:#bc6c25; color:#bc6c25" class="btn btn-primary btn-lg" id="btn-back">Volver</button></div>
 		</div>
